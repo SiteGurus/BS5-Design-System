@@ -6,6 +6,10 @@ If you'd like to build your own version of the module entirely, please create a 
 
 ## Changelog
 
+### 1.6.0
+
+Fix for cookie popup layout not properly removing optional cookie scripts placed within Liquid logic. Remember changes will only apply to freshly installed layouts. If you need to fix an existing layout manually, replace: `{% if context.exports.company_information.properties.google_analytics_id != blank and context.exports.sitebuilder.cookie_preferences_js == 'all' %}` with `{% if context.exports.company_information.properties.google_analytics_id != blank and context.cookies['sg-cookie-policy-settings'] == 'all' %}`
+
 ### 1.5.0
 
 Support for cookie preferences layouts.
