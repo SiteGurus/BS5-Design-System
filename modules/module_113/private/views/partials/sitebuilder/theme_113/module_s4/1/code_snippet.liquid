@@ -80,7 +80,7 @@
 {% endif %}
 
 {% comment %} Output analytics script of choice if preference is set to all. {% endcomment %}
-{% if context.exports.company_information.properties.google_analytics_id != blank and context.exports.sitebuilder.cookie_preferences_js == 'all' %}
+{% if context.exports.company_information.properties.google_analytics_id != blank and context.cookies['sg-cookie-policy-settings'] == 'all' %}
   <!-- Google analytics - please update your id in company information -->
   <script async src="https://www.googletagmanager.com/gtag/js?id={{context.exports.company_information.properties.google_analytics_id}}"></script>
   <script>
