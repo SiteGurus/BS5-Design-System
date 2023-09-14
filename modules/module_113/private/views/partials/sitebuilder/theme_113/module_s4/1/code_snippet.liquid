@@ -14,7 +14,7 @@
 
 {%- if context.cookies.sg-cookie-policy-settings == blank and hide_popup == false -%}
   {% if context.exports.sitebuilder.cookie_preferences_js == blank %}
-    <script async src="{{'modules/module_86/js/v1/sitegurus_cookie_settings.js' | asset_url }}"></script>
+    <script async src="{{'modules/module_86/js/v1/sitegurus_cookie_settings.min.js' | asset_url }}"></script>
     {% assign cookie_preferences_js = true %}
     {% export cookie_preferences_js, namespace: sitebuilder %}
   {% endif %}
